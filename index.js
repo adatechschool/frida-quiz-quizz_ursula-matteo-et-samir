@@ -1,56 +1,47 @@
 const questionnaire = [
    
     {
-      text: "Quel pays est souvent considéré comme le berceau de l’Afrobeat ?",
-      options: [
-       {answer:"A.Ghana"},
-        {answer:"B. Afrique du Sud"},
-        {answer:"C. Nigeria"},
-        {answer:"D. Côte d’Ivoire"}],
+      question: "Quel pays est souvent considéré comme le berceau de l’Afrobeat ?",
+      answer: ["A.Ghana", "B. AfriqueDuSud", "C. Nigeria", "D. CôteDIvoire"],
+      correctAnswer : "Nigeria"
     },
-
-{
-      text: "La musique duquel de ces peuples a fortement influencé Fela Kuti dans la création de l’afrobeat ?",
-      options: [
-       {answer:"A. Yoruba"},
-        {answer:"B. Massaï"},
-        {answer:"C. Touareg"},
-        {answer:"D.Pygmée"}],
+    {
+      question: "La musique duquel de ces peuples a fortement influencé Fela Kuti dans la création de l’afrobeat ?",
+      answer: ["Yoruba", "Massai", "Touareg", "Pygmee"],
+      correctAnswer : "Yoruba"
     },
-
-{
-      text: "Quel artiste est connu pour avoir popularisé le mélange rap et afrobeat avec des sons comme Afro Trap Part.3 ?",
-      options: [
-       {answer:"A.Niska<"},
-        {answer:"B.  MHD"},
-        {answer:"C.Burna Boy"},
-        {answer:"D.Olamide"}],
+    {
+      question: "Quel artiste est connu pour avoir popularisé le mélange rap et afrobeat avec des sons comme Afro Trap Part.3 ?",
+      answer: ["Niska", "MHD", "BurnaBoy", "Olamide"],
+      correctAnswer : "MHD"
     },
-{
-      text: "Quel instrument est le plus typique dans les instrus afrobeat ?",
-      options: [
-       {answer:"A.Guitare électrique"},
-        {answer:"B.Balafon"},
-        {answer:"C.Percussions / batterie africaine"},
-        {answer:"D.Harmonica"}],
+    {
+      question: "Quel instrument est le plus typique dans les instrus afrobeat ?",
+      answer: ["GuitareElectrique", "Balafon", "PercussionsBatterieAfricaine", "Harmonica"],
+      correctAnswer : "PercussionsBatterieAfricaine",
     },
-{
-      text: "Quel artiste a été l’un des premiers à parler de la banlieue dans le rap français dans les années 90 ?",
-      options: [
-       {answer:"A.IAM"},
-        {answer:"B. Kery James"},
-        {answer:"C.MC Solaar"},
-        {answer:"D. NTM"}],
+    {
+    question: "Quel artiste a été l’un des premiers à parler de la banlieue dans le rap français dans les années 90 ?",
+    answer: ["IAM", "KeryJames", "MCSolar", "NTM"],
+    correctAnswer : "NTM",
     },
-    
 ]
 
 
+const correctAnswer = "Nigeria";
+const buttons = document.querySelectorAll(".answer button");
+
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        if (button.id === correctAnswer) {
+            button.style.backgroundColor = "green";
+        } else {
+            button.style.backgroundColor = "red";
+        }
+       buttons.forEach(btn => btn.disabled = true);
+    });
+});
 
 
 
 
-
-
-
-// document.querySelector('h1').innerHTML = questionnaire[3].text 
