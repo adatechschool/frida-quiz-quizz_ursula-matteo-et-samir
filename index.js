@@ -3,7 +3,7 @@
 const questionnaire = [
    
     {
-      text: "Quel pays est souvent considéré comme le berceau de l’Afrobeat ?",
+      question: "Quel pays est souvent considéré comme le berceau de l’Afrobeat ?",
       options: [
        {answer:"A.Ghana"},
         {answer:"B. Afrique du Sud"},
@@ -13,7 +13,7 @@ const questionnaire = [
     },
 
 {
-      text: "La musique duquel de ces peuples a fortement influencé Fela Kuti dans la création de l’afrobeat ?",
+      question: "La musique duquel de ces peuples a fortement influencé Fela Kuti dans la création de l’afrobeat ?",
       options: [
        {answer:"A. Yoruba"},
         {answer:"B. Massaï"},
@@ -23,16 +23,16 @@ const questionnaire = [
     },
 
 {
-      text: "Quel artiste est connu pour avoir popularisé le mélange rap et afrobeat avec des sons comme Afro Trap Part.3 ?",
+      question: "Quel artiste est connu pour avoir popularisé le mélange rap et afrobeat avec des sons comme Afro Trap Part.3 ?",
       options: [
-       {answer:"A.Niska<"},
+       {answer:"A.Niska"},
         {answer:"B.  MHD"},
         {answer:"C.Burna Boy"},
         {answer:"D.Olamide"}],
         correct:1,// reponse B
     },
 {
-      text: "Quel instrument est le plus typique dans les instrus afrobeat ?",
+      question: "Quel instrument est le plus typique dans les instrus afrobeat ?",
       options: [
        {answer:"A.Guitare électrique"},
         {answer:"B.Balafon"},
@@ -41,7 +41,7 @@ const questionnaire = [
         correct:2,// reponse c
     },
 {
-      text: "Quel artiste a été l’un des premiers à parler de la banlieue dans le rap français dans les années 90 ?",
+      question: "Quel artiste a été l’un des premiers à parler de la banlieue dans le rap français dans les années 90 ?",
       options: [
        {answer:"A.IAM"},
         {answer:"B. Kery James"},
@@ -51,11 +51,44 @@ const questionnaire = [
     },
     
 ]
-let questionIndex=0;
-const question1= document.getElementById("quiz-questions");
-const option1= document.getElementById("quiz-options");
-const nextButton= document.getElementById("nextbtn")
+let currentIndex = 0;
+let score = 0;
+   function showQuestion(index) {
+  const currentQuestion = questionnaire[index];
+const questionDiv = document.getElementById("quiz-questions");
+  questionDiv.innerText = currentQuestion.question;
+  const optionsDiv = document.getElementById("quiz-options");
+  optionsDiv.innerHTML = ""; // Vide moi les anciennes réponses
 
+  currentQuestion.options.forEach((option, i) => {
+    const btn = document.createElement("button");
+    btn.innerText = option.answer;
+    btn.onclick = () => {
+      if (i === currentQuestion.correct) {
+        alert("Bonne réponse !");
+        score++;
+      } else {
+        alert("Mauvaise réponse !");
+      }
+      document.getElementById("nextbtn").disabled = false; 
+    };
+    optionsDiv.appendChild(btn);
+  });
 
+  document.getElementById("nextbtn").disabled = true; 
+}
+function nextQuestion() {
+  currentIndex++;
+  if (currentIndex < questionnaire.length) {
+    showQuestion(currentIndex);
+  } else {
+    // Fin du quiz
+    document.getElementById("quiz-questions").innerText = `Quiz terminé ! Ton score est : ${score}/${questionnaire.length}`;
+    document.getElementById("quiz-options").innerHTML = "";
+    document.getElementById("nextbtn").style.display = "none";
+  }
+}
+showQuestion(currentIndex);
+document.getElementById("nextbtn").addEventListener("click", nextQuestion);
 // document.querySelector('h1').innerHTML = questionnaire[3].text 
 
