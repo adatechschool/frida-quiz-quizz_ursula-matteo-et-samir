@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,20 @@
     <script defer src="index.js"></script>
     <link rel="stylesheet" href="index.css">
 </head>
- <body>
-  <h1>Quiz musical</h1>
-  <div id="quiz-container">
-    <div class="questions" id="quiz-questions"></div>
-    <div class="options" id="quiz-options"></div>
-    <button class="nextButton" id="nextbtn">Suivant</button>
-  </div>
-</body> 
+
+<body>
+    <h1>Quiz musical</h1>
+    <div id="quiz-container">
+        <div class="questions" id="quiz-questions"></div>
+        <div class="options" id="quiz-options" ></div>
+         </div>
+    <div id="pop-up" class="pop-up">
+        <div id ="popup-content"></div>
+        <p id="pop-upMessage"></p>
+       <button id="popup-nextbtn" class="nextBtn">Suivant</button>
+      
+    </div>
+     <button class="nextBtn" id="next-question" onclick="replayButton()">Rejouer</button>
+</body>
+
 </html>
