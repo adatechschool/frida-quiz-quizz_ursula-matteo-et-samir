@@ -12,7 +12,6 @@ initialiserPage()
 
 
 
-
 function showPopup(titreMessage, reponseLudique) {
   const message = `${titreMessage}\n\n${reponseLudique}`;
   document.getElementById("pop-upMessage").innerText = message;
@@ -25,13 +24,12 @@ function closePopup() {
   document.getElementById("popup-nextbtn").disabled = false;
 }
 
-
 let currentIndex = 0;
 let score = 0;
 function showQuestion(index) {
   const currentQuestion = currentQuiz[index];
   const questionDiv = document.getElementById("quiz-questions");
-  questionDiv.innerText = currentQuestion.question;
+    questionDiv.innerText = currentQuestion.question;
   const optionsDiv = document.getElementById("quiz-options");
   optionsDiv.innerHTML = ""; // Vide moi les anciennes réponses
 
@@ -48,26 +46,22 @@ function showQuestion(index) {
     btn.onclick = () => {
       const buttons = document.querySelectorAll("#quiz-options button");
       buttons.forEach(btn => btn.disabled = true);
+
       if (i === currentQuestion.correct) {
         showPopup("Bonne réponse !", currentQuestion.reponseLudique);
         score++;
       } else {
-        showPopup("Mauvaise réponse !", currentQuestion.reponseLudique);
 
-
-
-
+         showPopup("Mauvaise réponse !",currentQuestion.reponseLudique);
       }
     };
     optionsDiv.appendChild(btn);
-
-
-  });
+    });
+    updateProgressBar();
 }
 
-
 function nextQuestion() {
-  currentIndex++;
+      currentIndex++;
   if (currentIndex < questionnaire.length) {
     showQuestion(currentIndex);
   } else {
@@ -94,10 +88,35 @@ function replayButton() {
   currentIndex = 0
   score = 0
   showQuestion(currentIndex)
+
   document.getElementById("popup-nextbtn").style.display = "inline-block";
   document.getElementById("next-question").style.display = "none";
  document.getElementById('rapAfro').style.display="none"
  document.getElementById("accueil").style.display="none"
+
+
+  document.getElementById("popup-nextbtn").style.display="inline-block";
+  document.getElementById("next-question").style.display="none";
+  updateProgressBar();
+}
+
+function updateProgressBar() {
+  const progressBar = document.getElementById("progress-bar");
+  const progressText = document.getElementById("progress-text");
+  const totalQuestions = questionnaire.length;
+  const progress = currentIndex+1;
+  const pourcentage = (progress / totalQuestions) * 100;
+    progressBar.style.width = `${pourcentage}%`;
+    progressText.innerText = `${progress} / ${totalQuestions}`;
+  if (pourcentage <= 20) {
+    progressBar.style.backgroundColor = "yellow";
+  } else if (pourcentage <= 40) {
+    progressBar.style.backgroundColor = "gold";
+  } else if (pourcentage <= 60) {
+    progressBar.style.backgroundColor = "orange";
+  } else if (pourcentage <= 80) {
+    progressBar.style.backgroundColor = "brown";
+  } else  progressBar.style.backgroundColor = "red";
 
 }
 

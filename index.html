@@ -14,7 +14,14 @@
 
 
 <body>
+
+
     <h1>Quiz</h1>
+    <div id="progress-container">
+    <div id="progress-bar"></div>
+</div>
+<p id="progress-text" style="text-align: center; font-weight: bold; font-size: 1.2rem;">0 / 5</p>
+
     <div id="quiz-container">
         <div class="questions" id="quiz-questions"></div>
         <div class="options" id="quiz-options" ></div>
@@ -22,9 +29,9 @@
     <div id="pop-up" class="pop-up">
         <div id ="popup-content"></div>
         <p id="pop-upMessage"></p>
-       <button id="popup-nextbtn" class="nextBtn">Suivant</button>
-      
+        <button id="popup-nextbtn" class="nextBtn">Suivant</button>
     </div>
+
      <button class="nextBtn" id="next-question" onclick="replayButton()">Rejouer</button>
      <button class="nextBtn" id="accueil" onclick="accueil()">Accueil</button>
      <button class="nextBtn" id="rapAfro" onclick="rapAfro()">RapAfroBeat</button>
