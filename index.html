@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quizz musical</title>
+    <title>Quizz</title>
     <script defer src="index.js"></script>
     <link rel="stylesheet" href="index.css">
+  <script defer src="afrorap.js"></script> 
+   <script defer src="disney.js"></script> 
+
 </head>
- <body>
-  <h1>Quiz musical</h1>
-  <div id="quiz-container">
-    <div class="questions" id="quiz-questions"></div>
-    <div class="options" id="quiz-options"></div>
-    <button class="nextButton" id="nextbtn">Suivant</button>
-    <button class="nextButton" id="next-question" onclick="replayButton()">Replay</button>
-  </div>
-</body> 
+
+
+<body>
+    <h1>Quiz</h1>
+    <div id="quiz-container">
+        <div class="questions" id="quiz-questions"></div>
+        <div class="options" id="quiz-options" ></div>
+         </div>
+    <div id="pop-up" class="pop-up">
+        <div id ="popup-content"></div>
+        <p id="pop-upMessage"></p>
+       <button id="popup-nextbtn" class="nextBtn">Suivant</button>
+      
+    </div>
+     <button class="nextBtn" id="next-question" onclick="replayButton()">Rejouer</button>
+     <button class="nextBtn" id="accueil" onclick="accueil()">Accueil</button>
+     <button class="nextBtn" id="rapAfro" onclick="rapAfro()">RapAfroBeat</button>
+     <button class="nextBtn" id="disney" onclick="disney()">Disney</button>
+</body>
+
+
 </html>
