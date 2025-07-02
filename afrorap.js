@@ -56,6 +56,7 @@ const questionnaire = [
   },
 ]
 
+
 function rapAfro() {
   currentQuiz = questionnaire; // Le tableau de questions rap/afro
   currentIndex = 0;
@@ -65,4 +66,8 @@ function rapAfro() {
   showQuestion(currentIndex);
   document.getElementById('rapAfro').style.display="none"
   document.getElementById('disney').style.display="none"
+  document.getElementById('progress-text').style.display = "inline-block"
+  document.getElementById("progress-container").style.display="inline-block"
+  document.body.style.backgroundImage = "linear-gradient(to right, #F4A261, #E76F51, #2A9D8F)";
+    startTimer(10)
 }
