@@ -64,7 +64,13 @@ document.getElementById('accueil').style.display = "none";
   document.getElementById('rapAfro').style.display = "none";
   document.getElementById('disney').style.display = "none";
   document.getElementById('quiz-container').style.display = "block";
-
+  document.getElementById('progress-text').style.display = "inline-block"
+  document.getElementById("progress-container").style.display="inline-block"
+document.body.style.backgroundImage = "linear-gradient(to bottom right, #a2d2ff, #bde0fe, #ffc8dd)"
+document.getElementById('quiz-timer').style.display="inline-block"
 showQuestion(currentIndex)
+  startTimer(time)
+
+
 
 }
