@@ -65,4 +65,9 @@ function rapAfro() {
   showQuestion(currentIndex);
   document.getElementById('rapAfro').style.display="none"
   document.getElementById('disney').style.display="none"
+   document.getElementById('progress-text').style.display = "inline-block"
+  document.getElementById("progress-container").style.display="inline-block"
+  document.body.style.backgroundImage = "linear-gradient(to right, #f4a261, #e76f51, #2a9d8f)";
+  document.getElementById('quiz-timer').style.display="inline-block"
+    startTimer(time)
 }
