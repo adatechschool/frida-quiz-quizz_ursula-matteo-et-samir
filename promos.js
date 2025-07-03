@@ -91,6 +91,8 @@ document.getElementById('accueil').style.display = "none";
   document.getElementById('quiz-container').style.display = "block";
   document.getElementById('progress-text').style.display = "inline-block"
   document.getElementById("progress-container").style.display="inline-block"
+   document.getElementById('promos').style.display = "none";
+
 document.body.style.backgroundImage = "linear-gradient(to bottom right, #a2d2ff, #bde0fe, #ffc8dd)"
 
 showQuestion(currentIndex)
