@@ -1,6 +1,6 @@
 function initialiserPage() 
 {
- // document.getElementById("accueil").style.display = "block";
+  //document.getElementById("accueil").style.display = "block";
   document.getElementById("quiz-container").style.display = "none";
   document.getElementById("accueil").style.display="none"
   document.getElementById("disney").style.display="inline-block"
