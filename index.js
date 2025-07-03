@@ -117,10 +117,8 @@ function updateProgressBar() {
 
 function accueil() {
   initialiserPage()
-  document.getElementById('accueil').style.display = "none"
-  document.getElementById("rapAfro").style.display = "inline-block"
-  document.getElementById("next-question").style.display = "none"
-  document.body.style.backgroundImage = "";
+
+document.body.style.backgroundImage = "";
 }
 
 
