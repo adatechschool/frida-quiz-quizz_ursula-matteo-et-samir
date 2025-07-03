@@ -1,9 +1,9 @@
-let time = 10 
-//new Audio('nerveux.mp4')
-//const trump = new Audio('video.M4V')
-//const cartman= new Audio('video 2.M4V')
-//const cartman1 = new Audio('video 3.M4V')
-//const nerveux = new Audio('nerveux.mp4')
+let time = 10
+new Audio('nerveux.mp4')
+const trump = new Audio('video.M4V')
+const cartman= new Audio('video 2.M4V')
+const cartman1 = new Audio('video 3.M4V')
+const nerveux = new Audio('nerveux.mp4')
 function showPopup(titreMessage, reponseLudique) {
   const message = `${titreMessage}\n\n${reponseLudique}`;
   document.getElementById("pop-upMessage").innerText = message;
@@ -165,9 +165,6 @@ function updateProgressBar() {
 }
 function accueil() {
   initialiserPage()
-  document.getElementById('accueil').style.display = "none"
-  document.getElementById("rapAfro").style.display = "inline-block"
-  document.getElementById("next-question").style.display = "none"
   document.body.style.backgroundImage = "";
 }
 let timer = 10;
