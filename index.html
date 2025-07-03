@@ -7,8 +7,11 @@
     <title>Quizz</title>
     <script defer src="index.js"></script>
     <link rel="stylesheet" href="index.css">
+
     <script defer src="afrorap.js"></script>
     <script defer src="disney.js"></script>
+    <script defer src="initialiserPage.js"></script>
+    <script defer src="promos.js"></script>
 </head>
 
 <body>
@@ -16,25 +19,29 @@
     <div id="progress">
         <div id="progress-container">
             <div id="progress-bar"></div>
-        
         </div>
-         <p id="progress-text" style="font-weight: bold; font-size: 1.2rem;">0 / 5</p>
+        <p id="progress-text" style="font-weight: bold; font-size: 1.2rem;">0 / 5</p>
     </div>
-   
+
     <div id="quiz-container">
         <div class="questions" id="quiz-questions"></div>
         <div class="options" id="quiz-options"></div>
         <div id="quiz-timer"></div>
     </div>
+
     <div id="pop-up" class="pop-up">
         <div id="popup-content"></div>
         <p id="pop-upMessage"></p>
         <button id="popup-nextbtn" class="nextBtn">Suivant</button>
     </div>
+
+
     <button class="nextBtn" id="next-question" onclick="replayButton()">Rejouer</button>
     <button class="nextBtn" id="accueil" onclick="accueil()">Accueil</button>
     <button class="nextBtn" id="rapAfro" onclick="rapAfro()">RapAfroBeat</button>
     <button class="nextBtn" id="disney" onclick="disney()">Disney</button>
+    <button class="nextBtn" id="promos" onclick="promos()">Promos</button>
+
 </body>
 
 </html>

@@ -67,8 +67,12 @@ document.getElementById('accueil').style.display = "none";
   document.getElementById('quiz-container').style.display = "block";
   document.getElementById('progress-text').style.display = "inline-block"
   document.getElementById("progress-container").style.display="inline-block"
-  document.getElementById("quiz-timer").style.display="inline-block";
+
+document.body.style.backgroundImage = "linear-gradient(to bottom right, #a2d2ff, #bde0fe, #ffc8dd)"
+document.getElementById('quiz-timer').style.display="inline-block"
 showQuestion(currentIndex)
-document.body.style.backgroundImage = "linear-gradient(to bottom right, #A2D2FF, #BDE0FE, #FFC8DD)"
-  startTimer(10)
+  startTimer(time)
+
+
+
 }

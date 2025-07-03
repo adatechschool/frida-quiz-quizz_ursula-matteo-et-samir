@@ -64,10 +64,12 @@ function rapAfro() {
   document.getElementById("accueil").style.display = "none";
   document.getElementById("quiz-container").style.display = "block";
   showQuestion(currentIndex);
-  document.getElementById('rapAfro').style.display="none"
-  document.getElementById('disney').style.display="none"
+  document.getElementById('rapAfro').style.display = "none"
+  document.getElementById('disney').style.display = "none"
   document.getElementById('progress-text').style.display = "inline-block"
-  document.getElementById("progress-container").style.display="inline-block"
-  document.body.style.backgroundImage = "linear-gradient(to right, #F4A261, #E76F51, #2A9D8F)";
-    startTimer(10)
+  document.getElementById("progress-container").style.display = "inline-block"
+  document.body.style.backgroundImage = "linear-gradient(to right, #f4a261, #e76f51, #2a9d8f)";
+  document.getElementById('quiz-timer').style.display = "inline-block"
+  startTimer(time)
 }
+

@@ -1,6 +1,5 @@
 body {
-     background: linear-gradient(to left, brown, orange, yellow);
-     
+     background: linear-gradient(to left, brown, orange, yellow);  
 }    
 
 h1 {
@@ -13,12 +12,11 @@ h1 {
   margin-bottom: 0%;
   text-shadow: 10px 30px 3px rgba(50, 10, 10, 0.2);
 }
+
 #progress{
     display: flex;
     flex-direction: column;
     margin-bottom: 2%;
-    
-
 }
 
 #progress-container {
@@ -27,6 +25,7 @@ h1 {
     height: 25px;
     background-color: rgb(153, 209, 96);
     border-radius: 15px;
+
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -36,6 +35,7 @@ h1 {
 #progress-bar {
     height: 25px;
     width:0%;
+
     transition: width 4s ease;
     margin-block: 0%;
     max-width: 800px;
@@ -48,8 +48,8 @@ h1 {
     margin:auto;
     align-items:center;
     display:flex;
-}
 
+}
 #quiz-questions {
   width: 100%;
   font-size: 2rem;
@@ -57,9 +57,8 @@ h1 {
   color:darkgreen;
   margin-bottom: 0%;
   margin-top: -3%;
-  
-}
 
+}
 #quiz-options {
     background-color: rgba(255, 255, 255, 0);
     padding: 0.5rem 8rem;
@@ -100,9 +99,11 @@ h1 {
     margin: 1rem auto;
 }
 
+
 #popup-nextbtn {
    display:none
 }
+
 
 #next-question {
    justify-content: flex-end;
@@ -110,8 +111,9 @@ h1 {
    align-items:flex-end;
 }
 
+
 .nextBtn {
- width: 100%;
+    width: 100%;
     max-width: 300px;
     height: 75px;
     padding: 1rem 2rem;
@@ -152,3 +154,15 @@ button {
     font-weight : bold;
     color :maroon;
 }
+
+#disney  {
+    background-image: url('https://images.unsplash.com/photo-1590144662036-33bf0ebd2c7f?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;           /* ou 'contain' si tu veux voir toute l’image */
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;              /* comme ton bouton d’origine */
+    overflow: hidden;                 /* utile si tu veux éviter que l’image déborde */
+    color: white;                     /* au cas où tu veux que le texte ressorte */
+    transform: scale(1.08);
+}
+
