@@ -64,7 +64,9 @@ function rapAfro() {
   document.getElementById("accueil").style.display = "none";
   document.getElementById("quiz-container").style.display = "block";
   showQuestion(currentIndex);
+
   document.getElementById('rapAfro').style.display = "none"
+  document.getElementById('promos').style.display = "none";
   document.getElementById('disney').style.display = "none"
   document.getElementById('progress-text').style.display = "inline-block"
   document.getElementById("progress-container").style.display = "inline-block"

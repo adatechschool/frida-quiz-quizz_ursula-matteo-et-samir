@@ -64,6 +64,7 @@ score=0
 document.getElementById('accueil').style.display = "none";
   document.getElementById('rapAfro').style.display = "none";
   document.getElementById('disney').style.display = "none";
+ document.getElementById('promos').style.display = "none";
   document.getElementById('quiz-container').style.display = "block";
   document.getElementById('progress-text').style.display = "inline-block"
   document.getElementById("progress-container").style.display="inline-block"
