@@ -1,24 +1,30 @@
 
 
 let time = 10
+<<<<<<< HEAD
 
 //const trump = new Audio('video.M4V')
 //const cartman= new Audio('video 2.M4V')
 //const cartman1 = new Audio('video 3.M4V')
 //const nerveux = new Audio('nerveux.mp4')
 
+=======
+new Audio('nerveux.mp4')
+const trump = new Audio('video.M4V')
+const cartman= new Audio('video 2.M4V')
+const cartman1 = new Audio('video 3.M4V')
+const nerveux = new Audio('nerveux.mp4')
+>>>>>>> 6305599d4af1a7c1cef88178fc7ec3c5c2c8aad7
 function showPopup(titreMessage, reponseLudique) {
   const message = `${titreMessage}\n\n${reponseLudique}`;
   document.getElementById("pop-upMessage").innerText = message;
   document.getElementById("pop-up").style.display = "flex";
   document.getElementById("popup-nextbtn").style.display = "block";
 }
-
 function closePopup() {
   document.getElementById("pop-up").style.display = "none";
   document.getElementById("popup-nextbtn").disabled = false;
 }
-
 let currentIndex = 0;
 let score = 0;
 function showQuestion(index) {
@@ -43,6 +49,7 @@ function showQuestion(index) {
         cartman.play()
         score++;
       } else {
+<<<<<<< HEAD
 
         showPopup("Mauvaise réponse !", currentQuestion.reponseLudique);
         nerveux.play()
@@ -52,17 +59,26 @@ function showQuestion(index) {
     optionsDiv.appendChild(btn);
     clearInterval(timeInterval);
     startTimer(10)
+=======
+        showPopup("Mauvaise réponse !", currentQuestion.reponseLudique);
+        nerveux.play()
+      }
+    };
+    optionsDiv.appendChild(btn);
+>>>>>>> 6305599d4af1a7c1cef88178fc7ec3c5c2c8aad7
   });
   updateProgressBar();
 }
-
 function nextQuestion() {
   currentIndex++;
   if (currentIndex < currentQuiz.length) {
     showQuestion(currentIndex);
   } else {
     // Fin du quiz
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6305599d4af1a7c1cef88178fc7ec3c5c2c8aad7
     document.getElementById("quiz-questions").innerText = `Quiz terminé ! Ton score est : ${score}/${currentQuiz.length}`;
     document.getElementById("quiz-options").innerHTML = "";
     document.getElementById("popup-nextbtn").style.display = "none";
@@ -77,25 +93,23 @@ document.getElementById("popup-nextbtn").onclick = function () {
   nextQuestion();
   startTimer(time)
 };
-
-
-
 function replayButton() {
   currentIndex = 0
   score = 0
   showQuestion(currentIndex)
   startTimer(time)
-
   document.getElementById("popup-nextbtn").style.display = "inline-block";
   document.getElementById("next-question").style.display = "none";
   document.getElementById('rapAfro').style.display = "none"
   document.getElementById("accueil").style.display = "none"
   document.getElementById("popup-nextbtn").style.display = "inline-block";
   document.getElementById("next-question").style.display = "none";
+<<<<<<< HEAD
   document.getElementById("quiz-timer").style.display = "inline-block";
+=======
+>>>>>>> 6305599d4af1a7c1cef88178fc7ec3c5c2c8aad7
   updateProgressBar();
 }
-
 function updateProgressBar() {
   const progressBar = document.getElementById("progress-bar");
   const progressText = document.getElementById("progress-text");
@@ -114,14 +128,83 @@ function updateProgressBar() {
     progressBar.style.backgroundColor = "brown";
   } else progressBar.style.backgroundColor = "red";
 }
-
 function accueil() {
   initialiserPage()
+<<<<<<< HEAD
 
 document.body.style.backgroundImage = "";
+=======
+  document.getElementById('accueil').style.display = "none"
+  document.getElementById("rapAfro").style.display = "inline-block"
+  document.getElementById("next-question").style.display = "none"
+  document.body.style.backgroundImage = "";
+}
+function showPopup(titreMessage, reponseLudique) {
+  const message = `${titreMessage}\n\n${reponseLudique}`;
+  document.getElementById("pop-upMessage").innerText = message;
+  document.getElementById("pop-up").style.display = "flex";
+  document.getElementById("popup-nextbtn").style.display = "block";
+}
+function closePopup() {
+  document.getElementById("pop-up").style.display = "none";
+  document.getElementById("popup-nextbtn").disabled = false;
+>>>>>>> 6305599d4af1a7c1cef88178fc7ec3c5c2c8aad7
 }
 
-
+function nextQuestion() {
+  currentIndex++;
+  if (currentIndex < currentQuiz.length) {
+    showQuestion(currentIndex);
+  } else {
+    // Fin du quiz
+    document.getElementById("quiz-questions").innerText = `Quiz terminé ! Ton score est : ${score}/${currentQuiz.length}`;
+    document.getElementById("quiz-options").innerHTML = "";
+    document.getElementById("popup-nextbtn").style.display = "none";
+    document.getElementById("next-question").style.display = "inline-block";
+    document.getElementById('accueil').style.display = "inline-block"
+    document.getElementById("quiz-timer").style.display = "none"
+  }
+}
+document.getElementById("popup-nextbtn").onclick = function () {
+  document.getElementById("pop-up").style.display = "none";
+  nextQuestion();
+  startTimer(time)
+};
+function replayButton() {
+  currentIndex = 0
+  score = 0
+  showQuestion(currentIndex)
+  startTimer(time)
+  document.getElementById("popup-nextbtn").style.display = "inline-block";
+  document.getElementById("next-question").style.display = "none";
+  document.getElementById('rapAfro').style.display = "none"
+  document.getElementById("accueil").style.display = "none"
+  document.getElementById("popup-nextbtn").style.display = "inline-block";
+  document.getElementById("next-question").style.display = "none";
+  updateProgressBar();
+}
+function updateProgressBar() {
+  const progressBar = document.getElementById("progress-bar");
+  const progressText = document.getElementById("progress-text");
+  const totalQuestions = currentQuiz.length;
+  const progress = currentIndex + 1;
+  const pourcentage = (progress / totalQuestions) * 100;
+  progressBar.style.width = `${pourcentage}%`;
+  progressText.innerText = `${progress} / ${totalQuestions}`;
+  if (pourcentage <= 20) {
+    progressBar.style.backgroundColor = "yellow";
+  } else if (pourcentage <= 40) {
+    progressBar.style.backgroundColor = "gold";
+  } else if (pourcentage <= 60) {
+    progressBar.style.backgroundColor = "orange";
+  } else if (pourcentage <= 80) {
+    progressBar.style.backgroundColor = "brown";
+  } else progressBar.style.backgroundColor = "red";
+}
+function accueil() {
+  initialiserPage()
+  document.body.style.backgroundImage = "";
+}
 let timer = 10;
 let timeInterval;
 function startTimer(duration) {
@@ -141,7 +224,23 @@ function startTimer(duration) {
     }
   }
     , 1000);
+<<<<<<< HEAD
 
 }
 
 
+=======
+}
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 6305599d4af1a7c1cef88178fc7ec3c5c2c8aad7
