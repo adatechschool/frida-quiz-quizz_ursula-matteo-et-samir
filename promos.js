@@ -63,7 +63,7 @@ const questionnairePromos = [
       { answer: "Abdel" },
       { answer: "Guillaume" }],
     correct: 0,//Reponse D
-    reponseLudique: "Mattéo bien entendu, il est tellement beau. Tu as pris son numéro d'ailleurs? N'oublie pas !",
+    reponseLudique: "Plus relou tu meurs je pense, On la donne a la promo Frances ?",
   },
    {
 
